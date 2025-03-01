@@ -57,13 +57,13 @@ client.on('interactionCreate', async (interaction) => {
         const { MessageEmbed } = require('discord.js');
         const stockEmbedd = new MessageEmbed()
             .setColor(REGIONS[region].color)
-            .setTitle('https://falcoqb.com/stock/')
-            .setURL('https://falcoqb.com/stock/')
+            .setTitle('')
+            .setURL('')
             .setAuthor({ name: `${REGIONS[region].name} Stock Information`, iconURL: 'https://cdn.discordapp.com/attachments/918281028710314084/947833724505051146/1024x1024.png', url: 'https://falcoqb.com/stock/' })
             .setThumbnail(REGIONS[region].flagImage)
-            .setImage('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/AMD_Logo.svg/800px-AMD_Logo.svg.png?20180706160941')
+            .setImage('')
             .setTimestamp()
-            .setFooter({ text: `Stock values for AMD Region ${region} Last Updated: `, iconURL: 'https://cdn.discordapp.com/attachments/918281028710314084/947833724505051146/1024x1024.png' });
+            .setFooter({ text: `Stock values for Region ${region} Last Updated: `, iconURL: 'https://cdn.discordapp.com/attachments/918281028710314084/947833724505051146/1024x1024.png' });
 
             if (date != null) {
                 stockEmbedd.setDescription(`${date}`)
@@ -95,13 +95,13 @@ client.on('messageCreate', async (message) => {
         if (REGIONS[upperedRegion].message != '' && REGIONS[upperedRegion].message.deleted == false) {
             const newEmbedd = new MessageEmbed()
             .setColor(REGIONS[upperedRegion].color)
-            .setTitle('https://falcoqb.com/stock/')
-            .setURL('https://falcoqb.com/stock/')
-            .setAuthor({ name: `${REGIONS[upperedRegion].name} Stock Information`, iconURL: 'https://cdn.discordapp.com/attachments/918281028710314084/947833724505051146/1024x1024.png', url: 'https://falcoqb.com/stock/' })
+            .setTitle('')
+            .setURL('')
+            .setAuthor({ name: `${REGIONS[upperedRegion].name} Stock Information`, iconURL: 'https://cdn.discordapp.com/attachments/918281028710314084/947833724505051146/1024x1024.png', url: '' })
             .setThumbnail(REGIONS[upperedRegion].flagImage)
-            .setImage('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/AMD_Logo.svg/800px-AMD_Logo.svg.png?20180706160941')
+            .setImage('')
             .setTimestamp()
-            .setFooter({ text: `Stock values for AMD Region ${upperedRegion} Last Updated: `, iconURL: 'https://cdn.discordapp.com/attachments/918281028710314084/947833724505051146/1024x1024.png' });
+            .setFooter({ text: `Stock values for Region ${upperedRegion} Last Updated: `, iconURL: 'https://cdn.discordapp.com/attachments/918281028710314084/947833724505051146/1024x1024.png' });
 
         
             Object.values(PRODUCTS).forEach(sku => {
